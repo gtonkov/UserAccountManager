@@ -26,10 +26,7 @@ public class AccountServiceController {
 	@RequestMapping(value="/acc/", method=RequestMethod.GET)
 	public ResponseEntity<List<Account>> getAllAccounts() {
 		List<Account> accounts = accountDAO.getAllAccounts();
-		if (!accounts.isEmpty()) {
-			return new ResponseEntity<List<Account>>(accounts, HttpStatus.OK);
-		}
-		return new ResponseEntity<List<Account>>(HttpStatus.NOT_FOUND);
+		return new ResponseEntity<List<Account>>(accounts, HttpStatus.OK);
 	}
 	
 	@RequestMapping(value="/acc/{id}", method=RequestMethod.GET)
