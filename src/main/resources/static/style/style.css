@@ -1,0 +1,49 @@
+body, #mainWrapper {
+	height: 100%;
+	background-color: #f2f3ff;
+}
+
+body, .form-control{
+	font-size:12px!important;
+}
+.generic-container {
+  width:80%;
+  margin: auto;
+  background-color: #e5e5e5;
+  border: 5px solid #c8c3d8;
+  border-radius: 4px;
+}
+
+.floatRight{
+	float:right;
+	margin-right: 18px;
+}
+
+.has-error{
+	color:red;
+}
+
+.formcontainer{
+	background-color: #f2f3ff;
+	padding: 20px;
+}
+
+.tablecontainer{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+tr:nth-child(even){background-color: #e6e8ed}
+
+.button-width {
+    width: 80px !important;
+}
+
+.datepickerdemo md-content {
+            padding-bottom: 200px; 
+         }
+        .datepickerdemo .validation-messages {
+            font-size: 11px;
+            color: darkred;
+            margin: 10px 0 0 25px; 
+         }

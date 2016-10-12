@@ -1,0 +1,22 @@
+INSERT INTO accounts(id,first_name,last_name,email,date_of_birth) VALUES(1, 'Oliver', 'Smith', 'OSmith@gmail.com', STR_TO_DATE('2-01-2012', '%d-%m-%Y'));
+INSERT INTO accounts(id,first_name,last_name,email,date_of_birth) VALUES(2, 'Jack', 'Williams', 'JWilliams@gmail.com', STR_TO_DATE('4-02-2012', '%d-%m-%Y'));
+INSERT INTO accounts(id,first_name,last_name,email,date_of_birth) VALUES(3, 'Harry', 'Jones', '@HJonesgmail.com', STR_TO_DATE('7-03-2012', '%d-%m-%Y'));
+INSERT INTO accounts(id,first_name,last_name,email,date_of_birth) VALUES(4, 'Jacob', 'Taylor', '@JTaylorgmail.com', STR_TO_DATE('11-04-2012', '%d-%m-%Y'));
+INSERT INTO accounts(id,first_name,last_name,email,date_of_birth) VALUES(5, 'Charlie', 'Brown', 'CBrown@gmail.com', STR_TO_DATE('16-05-2012', '%d-%m-%Y'));
+INSERT INTO accounts(id,first_name,last_name,email,date_of_birth) VALUES(6, 'Thomas', 'Davies', 'TDavies@gmail.com', STR_TO_DATE('22-06-2012', '%d-%m-%Y'));
+INSERT INTO accounts(id,first_name,last_name,email,date_of_birth) VALUES(7, 'Oscar', 'Evans', 'OEvans@gmail.com', STR_TO_DATE('29-07-2012', '%d-%m-%Y'));
+INSERT INTO accounts(id,first_name,last_name,email,date_of_birth) VALUES(8, 'William', 'Thomas', 'WThomas@gmail.com', STR_TO_DATE('21-08-2012', '%d-%m-%Y'));
+INSERT INTO accounts(id,first_name,last_name,email,date_of_birth) VALUES(9, 'James', 'Wilson', 'JWilson@gmail.com', STR_TO_DATE('12-09-2012', '%d-%m-%Y'));
+INSERT INTO accounts(id,first_name,last_name,email,date_of_birth) VALUES(10, 'George', 'Johnson', 'GJohnson@gmail.com', STR_TO_DATE('1-11-2012', '%d-%m-%Y'));
+INSERT INTO accounts(id,first_name,last_name,email,date_of_birth) VALUES(11, 'Amelia', 'Roberts', 'ARoberts@gmail.com', STR_TO_DATE('13-12-2012', '%d-%m-%Y'));
+INSERT INTO accounts(id,first_name,last_name,email,date_of_birth) VALUES(12, 'Olivia', 'Robinson', 'ORobinson@gmail.com', STR_TO_DATE('25-01-2012', '%d-%m-%Y'));
+INSERT INTO accounts(id,first_name,last_name,email,date_of_birth) VALUES(13, 'Emily', 'Thompson', 'EThompson@gmail.com', STR_TO_DATE('14-02-2012', '%d-%m-%Y'));
+INSERT INTO accounts(id,first_name,last_name,email,date_of_birth) VALUES(14, 'Grace', 'Wright', 'GWright@gmail.com', STR_TO_DATE('28-03-2012', '%d-%m-%Y'));
+INSERT INTO accounts(id,first_name,last_name,email,date_of_birth) VALUES(15, 'Scarlett', 'Walker', 'SWalker@gmail.com', STR_TO_DATE('16-04-2012', '%d-%m-%Y'));
+INSERT INTO accounts(id,first_name,last_name,email,date_of_birth) VALUES(16, 'Jessica', 'White', 'JWhite@gmail.com', STR_TO_DATE('10-05-2012', '%d-%m-%Y'));
+INSERT INTO accounts(id,first_name,last_name,email,date_of_birth) VALUES(17, 'Lily', 'Edwards', 'LEdwards@gmail.com', STR_TO_DATE('17-06-2012', '%d-%m-%Y'));
+INSERT INTO accounts(id,first_name,last_name,email,date_of_birth) VALUES(18, 'Isabella', 'Hughes', 'IHughes@gmail.com', STR_TO_DATE('18-07-2012', '%d-%m-%Y'));
+INSERT INTO accounts(id,first_name,last_name,email,date_of_birth) VALUES(19, 'Sophie', 'Green', 'SGreen@gmail.com', STR_TO_DATE('19-08-2012', '%d-%m-%Y'));
+INSERT INTO accounts(id,first_name,last_name,email,date_of_birth) VALUES(20, 'Mia', 'Hall', 'MHall@gmail.com', STR_TO_DATE('20-09-2012', '%d-%m-%Y'));
+   
+COMMIT;

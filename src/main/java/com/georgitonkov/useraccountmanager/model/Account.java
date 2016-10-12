@@ -1,4 +1,4 @@
-package com.georgitonkov.model;
+package com.georgitonkov.useraccountmanager.model;
 
 import java.util.Date;
 
@@ -18,63 +18,34 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 @Table(name="accounts")
 public class Account {
 	
+	public Account(long id, String fName, String lName, Date bDate, String email) {
+		this.id = id;
+		this.firstName = fName;
+		this.lastName = lName;
+		this.dateOfBirth = bDate;
+		this.email = email;
+	}
+	
+	public Account () {};
+	
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="id", nullable=false)
 	private long id;
 	
 	@NotEmpty
-	@Column(name="first_name", nullable=false)
+	@Column(name="firstName", nullable=false)
 	private String firstName;
 	
-	@NotEmpty
-	@Column(name="last_name", nullable=false)
+	@Column(name="lastName", nullable=false)
 	private String lastName;
 	
 	@NotNull
 	@Column(name="date_of_birth", nullable=false)
-	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="dd-MM-yyyy")
 	private Date dateOfBirth;
 	
-	@NotEmpty
 	@Column(name="email", nullable=false)
 	private String email;
-	
-	public Account() {
-			
-	}
-	
-	public String getFirstName() {
-		return firstName;
-	}
-	
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-	
-	public String getLastName() {
-		return lastName;
-	}
-	
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-	
-	public String getEmail() {
-		return email;
-	}
-	
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	
-	public Date getDateOfBirth() {
-		return dateOfBirth;
-	}
-	
-	public void setDateOfBirth(Date dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
-	}
 	
 	public long getId() {
 		return id;
@@ -83,5 +54,37 @@ public class Account {
 	public void setId(long id) {
 		this.id = id;
 	}
-	
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public Date getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 }
