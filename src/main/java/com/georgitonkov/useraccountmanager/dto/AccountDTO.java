@@ -5,14 +5,14 @@ import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 public final class AccountDTO {
-
+	
 	private long id;
 	
 	private String firstName;
 	
 	private String lastName;
 
-	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="dd-MM-yyyy")
+	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="dd-MM-yyyy", timezone="EET")
 	private Date dateOfBirth;
 	
 	private String email;

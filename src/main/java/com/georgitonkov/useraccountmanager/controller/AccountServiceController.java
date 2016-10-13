@@ -1,17 +1,12 @@
 package com.georgitonkov.useraccountmanager.controller;
 
-import java.util.Collection;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
-import org.springframework.data.web.PagedResourcesAssembler;
-import org.springframework.hateoas.PagedResources;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -45,9 +40,9 @@ public class AccountServiceController {
 	}
 	
 	@RequestMapping(value="/acc", method=RequestMethod.POST)
-	public ResponseEntity<Void> createAccount(@RequestBody AccountDTO account, UriComponentsBuilder builder, BindingResult result) {
-		validator.validate(account, result);
-		if (result.hasErrors()) {
+	public ResponseEntity<Void> createAccount(@RequestBody AccountDTO account, UriComponentsBuilder builder) {
+		validator.validate(account);
+		if (validator.hasErrors()) {
 			return new ResponseEntity<Void>(HttpStatus.NOT_ACCEPTABLE);
 		}
 		service.createAccount(account);		
@@ -64,9 +59,9 @@ public class AccountServiceController {
 	}
 	
 	@RequestMapping(value="/acc/{id}", method=RequestMethod.PUT)
-	public ResponseEntity<Void> editAccount(@RequestBody AccountDTO account, @PathVariable("id") long id, BindingResult result) {
-		validator.validate(account, result);
-		if (result.hasErrors()) {
+	public ResponseEntity<Void> editAccount(@RequestBody AccountDTO account, @PathVariable("id") long id) {
+		validator.validate(account);
+		if (validator.hasErrors()) {
 			return new ResponseEntity<Void>(HttpStatus.NOT_ACCEPTABLE);
 		}
 		service.editAccount(account, id);
