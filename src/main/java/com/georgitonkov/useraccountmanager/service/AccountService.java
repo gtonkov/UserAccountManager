@@ -1,11 +1,12 @@
 package com.georgitonkov.useraccountmanager.service;
 
-import java.util.List;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import com.georgitonkov.useraccountmanager.dto.AccountDTO;
 
 public interface AccountService {
-	public List<AccountDTO> getAllAccounts();
+	public Page<AccountDTO> getAllAccounts(Pageable pageable);
 	public void createAccount(AccountDTO account);
 	public void deleteAccount(long id);
 	public AccountDTO getAccount(long id);

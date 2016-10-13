@@ -2,8 +2,12 @@
 
 accountApp.factory('AccountService', ['$http', '$q', function($http, $q){
 	return {
-		getAllAccounts: function() {
-			return $http.get(restServURL).then(
+		getAllAccounts: function(page, sort, reverse) {
+			var direction = 'asc';
+			if (reverse) {
+				direction = 'desc'
+			};
+			return $http.get(restServURL + '?size=5&page=' + page + "&sort=" + sort + "," + direction).then(
 				function(response){
 					return response.data;
 				}, 
@@ -23,7 +27,7 @@ accountApp.factory('AccountService', ['$http', '$q', function($http, $q){
 			);
 		},
 		editAccount: function(account, id) {
-			return $http.put(restServURL+id,account).then(
+			return $http.put(restServURL+'/'+id,account).then(
 				function(response){
 					return response.data;
 				}, 
@@ -33,7 +37,7 @@ accountApp.factory('AccountService', ['$http', '$q', function($http, $q){
 			)
 		},
 		deleteAccount: function(id) {
-			return $http.delete(restServURL+id).then(
+			return $http.delete(restServURL+'/'+id).then(
 				function(response){
 					return response.data;
 				}, 

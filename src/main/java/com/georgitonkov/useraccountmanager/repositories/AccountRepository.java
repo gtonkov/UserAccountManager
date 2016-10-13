@@ -1,16 +1,14 @@
 package com.georgitonkov.useraccountmanager.repositories;
 
-import java.util.List;
-
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.repository.query.Param;
-import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.repository.PagingAndSortingRepository;
 
 import com.georgitonkov.useraccountmanager.model.Account;
 
-public interface AccountRepository extends CrudRepository<Account, Long> {
+public interface AccountRepository extends PagingAndSortingRepository<Account, Long> {
 	Account findById(long id);
-	List<Account> findAll();
+	Page<Account> findAll(Pageable pageable);
 	@SuppressWarnings("unchecked")
 	Account save(Account account);
 	void delete(Account account);

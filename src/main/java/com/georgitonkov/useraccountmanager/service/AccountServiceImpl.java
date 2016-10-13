@@ -5,6 +5,9 @@ import java.util.List;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.georgitonkov.useraccountmanager.dto.AccountDTO;
@@ -18,12 +21,9 @@ public class AccountServiceImpl implements AccountService {
 	private AccountRepository repository;
 
 	@Override
-	public List<AccountDTO> getAllAccounts() {
-		List<Account> accounts = repository.findAll();
-		if (accounts == null) {
-			return new ArrayList<AccountDTO>();
-		}
-		return convertToDTOs(accounts);
+	public Page<AccountDTO> getAllAccounts(Pageable pageable) {
+		Page<AccountDTO> dtos = repository.findAll(pageable).map(this::convertToDTO);
+		return dtos;
 	}
 
 	@Override
